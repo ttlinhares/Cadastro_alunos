@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Listar Alunos
+    body
+        h1 Listar Alunos
+        table(border="1")
+            thead
+                tr
+                    th Id
+                    th Nome
+                    th Nota 1
+                    th Nota 2
+                    th Media
+                    th Situação
+            tbody
+                each p in alunos
+                    tr
+                        td #{p.id}
+                        td #{p.nome}
+                        td #{p.nota1}
+                        td #{p.nota2}
+                        td #{p.media}
+                        td #{p.situacao}
+        br
+        a(href='/cadastrar') Cadastrar
